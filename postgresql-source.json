@@ -1,0 +1,17 @@
+{
+  "name": "confluent-postgres-source-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "localhost",
+    "database.port": "5432",
+    "database.user": "username",
+    "database.password": "password",
+    "database.dbname": "users",
+    "database.server.name": "my_postgres_server",
+    "plugin.name": "pgoutput",
+    "slot.name": "debezium_slot",
+    "publication.name": "debezium_publication",
+    "table.include.list": "public.users"
+  }
+}
